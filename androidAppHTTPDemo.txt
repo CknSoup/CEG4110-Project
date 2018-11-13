@@ -1,5 +1,5 @@
 // Must be changed...
-                String url = "http://24.209.24.199:55555/upload";
+                String url = "";
                 File file = new File(Environment.DIRECTORY_DOWNLOADS + "/a.jpg"); // Name of the file that is to be sent
                 try {
                     HttpClient httpclient = new DefaultHttpClient();
