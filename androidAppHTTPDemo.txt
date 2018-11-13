@@ -1,0 +1,18 @@
+// Must be changed...
+                String url = "http://24.209.24.199:55555/upload";
+                File file = new File(Environment.DIRECTORY_DOWNLOADS + "/a.jpg"); // Name of the file that is to be sent
+                try {
+                    HttpClient httpclient = new DefaultHttpClient();
+
+                    HttpPost httppost = new HttpPost(url);
+
+                    InputStreamEntity reqEntity = new InputStreamEntity(new FileInputStream(file), -1);
+                    reqEntity.setContentType("photo");
+                    reqEntity.setChunked(true); // Send in multiple parts if needed
+                    httppost.setEntity(reqEntity);
+                    HttpResponse response = httpclient.execute(httppost);
+                    //Do something with response...
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
