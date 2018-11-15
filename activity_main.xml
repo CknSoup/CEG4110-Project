@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivityXML"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/submitPicturesBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:text="Submit Images"
+        app:layout_constraintBottom_toTopOf="@+id/infoBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/viewHistoryBtn"
+        app:layout_constraintTop_toBottomOf="@+id/imageBrowserBtn" />
+
+    <Button
+        android:id="@+id/viewHistoryBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginLeft="49dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="33dp"
+        android:text="View Past History"
+        app:layout_constraintBottom_toTopOf="@+id/infoBtn"
+        app:layout_constraintEnd_toStartOf="@+id/submitPicturesBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/takePictureBtn" />
+
+    <Button
+        android:id="@+id/takePictureBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginLeft="49dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginStart="49dp"
+        android:text="Take Picture"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBrowserBtn"
+        app:layout_constraintEnd_toStartOf="@+id/imageBrowserBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageBrowserBtn" />
+
+    <Button
+        android:id="@+id/imageBrowserBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:text="View Local Picture Gallery"
+        app:layout_constraintBottom_toTopOf="@+id/submitPicturesBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/takePictureBtn"
+        app:layout_constraintTop_toBottomOf="@+id/label" />
+
+    <Button
+        android:id="@+id/imageListBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginLeft="67dp"
+        android:layout_marginRight="67dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="34dp"
+        android:text="Image List"
+        app:layout_constraintBottom_toTopOf="@+id/label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginLeft="67dp"
+        android:layout_marginRight="67dp"
+        android:layout_marginStart="67dp"
+        android:text="Images in image list: 0"
+        app:layout_constraintBottom_toTopOf="@+id/imageBrowserBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageListBtn" />
+
+    <Button
+        android:id="@+id/infoBtn"
+        android:layout_width="129dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:text="Information For This App"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitPicturesBtn" />
+
+</android.support.constraint.ConstraintLayout>
