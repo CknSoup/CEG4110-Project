@@ -57,7 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
                     httppost.setEntity(reqEntity);
                     HttpResponse response = httpclient.execute(httppost);
-                    Log.i("Log response", response.getParams().toString() + "+++" + response.toString() + "+++" + response.getEntity().toString());
+                    
+                    // How to process the response from the server, places the confidences in the f[] array
+                    ResponseHandler<String> handler = new BasicResponseHandler();
+                    String body = handler.handleResponse(response);
+                    String[] floats = body.split(" ");
+                    float[] f = {Float.parseFloat(floats[0]), Float.parseFloat(floats[1])};
+                    Log.i("Log response", f[0] + " " + f[1]);
 
                 } catch (Exception e) {
                     e.printStackTrace();
