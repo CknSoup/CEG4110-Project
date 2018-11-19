@@ -5,13 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import android.widget.Toast;
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity implements Serializable{
     Button takePictureBtn;
@@ -21,19 +21,15 @@ public class MainActivity extends AppCompatActivity implements Serializable{
     Button imageListBtn;
     Button informationBtn;
     TextView tv;
-    List<ImageView> iml = new ArrayList<ImageView>();
+    int imageCount = 0;
+    List<File> iml;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent i = getIntent();
-        try{
-            iml = (ArrayList<ImageView>) i.getSerializableExtra("list");
-            //Toast.makeText(this,"Works", Toast.LENGTH_SHORT).show();
-        }
-        catch(Exception e){
-        }
+
+        iml = new ArrayList<File>();
 
         takePictureBtn = (Button) findViewById(R.id.takePictureBtn);
         localGalleryBtn = (Button) findViewById(R.id.imageBrowserBtn);
@@ -42,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements Serializable{
         imageListBtn = (Button) findViewById(R.id.imageListBtn);
         informationBtn = (Button) findViewById(R.id.infoBtn);
         tv = (TextView) findViewById(R.id.label);
+
+        submitBtn.setEnabled(false);
 
         takePictureBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,23 +62,28 @@ public class MainActivity extends AppCompatActivity implements Serializable{
         viewHistoryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, ViewHistory.class));
+                Intent i = new Intent(MainActivity.this, ViewHistory.class);
+                i.putExtra("list", (Serializable) iml);
+                startActivity(i);
             }
         });
 
         imageListBtn.setOnClickListener(new View.OnClickListener()  {
             @Override
             public void onClick(View view)  {
-                startActivity(new Intent(MainActivity.this, ImageList.class));
+                Intent i = new Intent(MainActivity.this, ImageList.class);
+                i.putExtra("list", (Serializable) iml);
+                startActivity(i);
             }
         });
 
         informationBtn.setOnClickListener(new View.OnClickListener()    {
             @Override
             public void onClick(View view)  {
-                startActivity(new Intent(MainActivity.this, InformationPage.class));
+                Intent i = new Intent(MainActivity.this, InformationPage.class);
+                i.putExtra("list", (Serializable) iml);
+                startActivity(i);
             }
         });
-
     }
 }

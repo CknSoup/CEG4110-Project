@@ -15,20 +15,23 @@ import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.File;
 
 public class LocalGallery extends AppCompatActivity implements Serializable{
     ImageView iv;
     Button homeBtn;
     Button viewGalleryBtn;
     Button saveBtn;
-    List<ImageView> iml;
+    List<File> iml;
+    ImageView imageView;
+    File file;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.local_gallery);
         Intent i = getIntent();
-        iml = (ArrayList<ImageView>) i.getSerializableExtra("list");
+        iml = (ArrayList<File>) i.getSerializableExtra("list");
 
         iv = (ImageView) findViewById(R.id.imageViewGallery);
         homeBtn = (Button) findViewById(R.id.galToHomeBtn);
@@ -38,7 +41,7 @@ public class LocalGallery extends AppCompatActivity implements Serializable{
         homeBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(LocalGallery.this, MainActivity.class);
+                Intent intent = new Intent(LocalGallery.this, MenuScreen.class);
                 intent.putExtra("list",(Serializable) iml);
                 startActivity(intent);
             }
@@ -56,6 +59,7 @@ public class LocalGallery extends AppCompatActivity implements Serializable{
             @Override
             public void onClick(View view){
                 //ADD TO IMAGE LIST
+                iml.add(file);
             }
         });
     }
@@ -75,10 +79,9 @@ public class LocalGallery extends AppCompatActivity implements Serializable{
             cursor.close();
 
             // Show the Selected Image on ImageView
-            ImageView imageView = (ImageView) findViewById(R.id.imageViewGallery);
+            imageView = (ImageView) findViewById(R.id.imageViewGallery);
             imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
-
+            file = new File(picturePath);
         }
     }
-
 }

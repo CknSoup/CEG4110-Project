@@ -21,7 +21,7 @@ import java.io.Serializable;
 import java.util.Calendar;
 import android.content.ContextWrapper;
 import android.content.Context;
-
+import android.graphics.Matrix;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -35,18 +35,14 @@ public class TakePicture extends AppCompatActivity{
     private Button homeBtn;
     private ImageView iv;
     Uri file;
-    List<ImageView> iml;
+    List<File> iml;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.take_picture);
         Intent i = getIntent();
-        iml = (ArrayList<ImageView>) i.getSerializableExtra("list");
-
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, file);
-        startActivityForResult(intent, 100);
+        iml = (ArrayList<File>) i.getSerializableExtra("list");
 
         pictureBtn = (Button) findViewById(R.id.button_image);
         homeBtn = (Button) findViewById(R.id.returnBtn);
@@ -60,7 +56,7 @@ public class TakePicture extends AppCompatActivity{
         homeBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(TakePicture.this, MainActivity.class);
+                Intent intent = new Intent(TakePicture.this, MenuScreen.class);
                 intent.putExtra("list",(Serializable) iml);
                 startActivity(intent);
             }
@@ -86,16 +82,32 @@ public class TakePicture extends AppCompatActivity{
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
-        Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
-        iv.setImageBitmap(thumbnail);
-        saveImage(thumbnail);
+        if(resultCode == RESULT_OK){
+            Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+            Matrix matrix = new Matrix();
+            matrix.postRotate(90);
+            iv.setImageBitmap(thumbnail);
+            Bitmap bm = Bitmap.createBitmap(thumbnail, 0 ,0, thumbnail.getWidth(), thumbnail.getHeight(), matrix, true);
+
+            saveImage(bm);
+
+//            Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+//            iv.setImageBitmap(thumbnail);
+//            saveImage(thumbnail);
+        }
+        else{
+            Intent intent = new Intent(TakePicture.this, TakePicture.class);
+            intent.putExtra("list",(Serializable) iml);
+            startActivity(intent);
+        }
     }
 
     public String saveImage(Bitmap bm) {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         bm.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
         File wallpaperDirectory = new File(
-                Environment.getExternalStorageDirectory() + "SeeFood");
+                //Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "seefood");
         if (!wallpaperDirectory.exists()) {
             wallpaperDirectory.mkdirs();
         }
