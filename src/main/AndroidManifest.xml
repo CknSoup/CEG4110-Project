@@ -58,6 +58,10 @@
         <activity android:name=".MenuScreen"
             android:label="SeeFood App - Menu Screen"
             android:screenOrientation="portrait" />
+
+        <activity android:name=".Results"
+            android:label="SeeFood App - Results"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

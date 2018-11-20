@@ -19,9 +19,8 @@ import android.media.MediaScannerConnection;
 
 import java.io.Serializable;
 import java.util.Calendar;
-import android.content.ContextWrapper;
-import android.content.Context;
 import android.graphics.Matrix;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -34,7 +33,9 @@ public class TakePicture extends AppCompatActivity{
     private Button pictureBtn;
     private Button homeBtn;
     private ImageView iv;
+    Button saveBtn;
     Uri file;
+    File fff;
     List<File> iml;
 
     @Override
@@ -46,7 +47,10 @@ public class TakePicture extends AppCompatActivity{
 
         pictureBtn = (Button) findViewById(R.id.button_image);
         homeBtn = (Button) findViewById(R.id.returnBtn);
+        saveBtn = (Button) findViewById(R.id.tpSaveBtn);
         iv = (ImageView) findViewById(R.id.imageview);
+
+        saveBtn.setEnabled(false);
 
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             pictureBtn.setEnabled(false);
@@ -59,6 +63,14 @@ public class TakePicture extends AppCompatActivity{
                 Intent intent = new Intent(TakePicture.this, MenuScreen.class);
                 intent.putExtra("list",(Serializable) iml);
                 startActivity(intent);
+            }
+        });
+
+        saveBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                iml.add(fff);
+                Toast.makeText(TakePicture.this, "Image added to image list", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -86,14 +98,9 @@ public class TakePicture extends AppCompatActivity{
             Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
             Matrix matrix = new Matrix();
             matrix.postRotate(90);
-            iv.setImageBitmap(thumbnail);
             Bitmap bm = Bitmap.createBitmap(thumbnail, 0 ,0, thumbnail.getWidth(), thumbnail.getHeight(), matrix, true);
-
+            iv.setImageBitmap(bm);
             saveImage(bm);
-
-//            Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
-//            iv.setImageBitmap(thumbnail);
-//            saveImage(thumbnail);
         }
         else{
             Intent intent = new Intent(TakePicture.this, TakePicture.class);
@@ -106,7 +113,6 @@ public class TakePicture extends AppCompatActivity{
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         bm.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
         File wallpaperDirectory = new File(
-                //Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
                 Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "seefood");
         if (!wallpaperDirectory.exists()) {
             wallpaperDirectory.mkdirs();
@@ -122,6 +128,9 @@ public class TakePicture extends AppCompatActivity{
                     new String[]{f.getPath()},
                     new String[]{"image/jpeg"}, null);
             fo.close();
+
+            saveBtn.setEnabled(true);
+            fff = f;
 
             return f.getAbsolutePath();
         } catch (IOException e1) {

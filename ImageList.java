@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -21,6 +22,12 @@ public class ImageList extends AppCompatActivity {
         setContentView(R.layout.image_list);
         Intent i = getIntent();
         iml = (ArrayList<File>) i.getSerializableExtra("list");
+
+        for(int ii = 0; ii < iml.size(); ii++){
+            String path = iml.get(ii).getPath();
+            //ImageView iv = new ImageView();
+
+        }
 
         homeBtn = (Button) findViewById(R.id.listToHome);
 

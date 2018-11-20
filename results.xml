@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/resultsIV"
+        android:layout_width="0dp"
+        android:layout_height="202dp"
+        android:layout_marginBottom="19dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/resultTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/background_light" />
+
+    <TextView
+        android:id="@+id/resultTV"
+        android:layout_width="193dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/s2TV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultsIV" />
+
+    <TextView
+        android:id="@+id/s1TV"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginStart="58dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/s2TV"
+        app:layout_constraintEnd_toStartOf="@+id/s2TV"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/s2TV"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/resultToMenuBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/s1TV"
+        app:layout_constraintTop_toBottomOf="@+id/resultTV" />
+
+    <Button
+        android:id="@+id/resultToMenuBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+        android:text="Menu Screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/s2TV" />
+</android.support.constraint.ConstraintLayout>

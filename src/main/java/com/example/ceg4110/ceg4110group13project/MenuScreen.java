@@ -1,6 +1,7 @@
 package com.example.ceg4110.ceg4110group13project;
 
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
@@ -11,32 +12,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.util.Log;
 
-import com.android.internal.http.multipart.MultipartEntity;
-
 import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.FileEntity;
 import org.apache.http.entity.InputStreamEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.impl.client.BasicResponseHandler;
 
-import java.lang.reflect.Array;
-import java.net.URL;
 import java.io.IOException;
 import java.io.Serializable;
-import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.File;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import android.widget.Toast;
 import java.io.FileInputStream;
 
@@ -48,7 +37,6 @@ public class MenuScreen extends AppCompatActivity implements Serializable{
     Button imageListBtn;
     Button informationBtn;
     TextView tv;
-    int imageCount = 0;
     List<File> iml;
 
     @Override
@@ -71,7 +59,7 @@ public class MenuScreen extends AppCompatActivity implements Serializable{
             submitBtn.setEnabled(false);
         }
 
-        String s = "Images in Image List: " + imageCount;
+        String s = "Images in Image List: " + iml.size();
         tv.setText(s);
 
         takePictureBtn.setOnClickListener(new View.OnClickListener() {
@@ -122,39 +110,60 @@ public class MenuScreen extends AppCompatActivity implements Serializable{
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(MenuScreen.this, "Button push1", Toast.LENGTH_SHORT).show();
                 try{
-                    String url = "http://18.224.124.230:1030/upload";
-                    //HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                    File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/a.jpg");
-                    StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-                    StrictMode.setThreadPolicy(policy);
+                    //for(int iii = 0; iii < iml.size(); iii++){
+                    Toast.makeText(MenuScreen.this, "Button push2", Toast.LENGTH_SHORT).show();
+                        String url = "http://18.224.124.230:1030/upload";
+                        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                        StrictMode.setThreadPolicy(policy);
 
-                    HttpClient httpclient = new DefaultHttpClient();
+                        HttpClient httpclient = new DefaultHttpClient();
 
-                    HttpPost httppost = new HttpPost(url);
+                        HttpPost httppost = new HttpPost(url);
 
-                    InputStreamEntity reqEntity = new InputStreamEntity(
-                            new FileInputStream(file), -1);
-                    reqEntity.setContentType("multipart/form-data");
-                    reqEntity.setChunked(true); // Send in multiple parts if needed
+                        File file = iml.get(0);
+                        InputStreamEntity reqEntity = new InputStreamEntity(
+                                new FileInputStream(file), -1);
+                        reqEntity.setContentType("multipart/form-data");
+                        reqEntity.setChunked(true); // Send in multiple parts if needed
 
+                        Toast.makeText(MenuScreen.this, "Connection attempt", Toast.LENGTH_SHORT).show();
 
-                    httppost.setEntity(reqEntity);
-                    HttpResponse response = httpclient.execute(httppost);
+                        httppost.setEntity(reqEntity);
+                        HttpResponse response = httpclient.execute(httppost);
 
-                    // How to process the response from the server, places the confidences in the f[] array
-                    ResponseHandler<String> handler = new BasicResponseHandler();
-                    String body = handler.handleResponse(response);
-                    String[] floats = body.split(" ");
-                    float[] f = {Float.parseFloat(floats[0]), Float.parseFloat(floats[1])};
-                    Log.i("Log response", f[0] + " " + f[1]);
+                        // How to process the response from the server, places the confidences in the f[] array
+                        ResponseHandler<String> handler = new BasicResponseHandler();
+                        String body = handler.handleResponse(response);
+                        String[] floats = body.split(" ");
+                        float[] f = {Float.parseFloat(floats[0]), Float.parseFloat(floats[1])};
+                        Log.i("Log response", f[0] + " " + f[1]);
+                        String s1 = String.valueOf(f[0]);
+                        String s2 = String.valueOf(f[1]);
+                        ImageView ivv = null;
+                        ivv.setImageBitmap(BitmapFactory.decodeFile(file.getAbsolutePath()));
+                        Toast.makeText(MenuScreen.this, s1, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MenuScreen.this, s2, Toast.LENGTH_SHORT).show();
+                    //}
 
-                    //connection.disconnect();
                     Toast.makeText(MenuScreen.this, "Works", Toast.LENGTH_SHORT).show();
+
+                    for(int ii = 0; ii < iml.size(); ii++){
+                        iml.remove(ii);
+                    }
+                    tv.setText("Images in Image List: " + iml.size());
+
+//                    Intent intent = new Intent (MenuScreen.this, Results.class);
+//                    intent.putExtra("f1", (Serializable) s1);
+//                    intent.putExtra("f2", (Serializable) s2);
+//                    intent.putExtra("ivv", (Serializable) ivv);
+//                    intent.putExtra("list",(Serializable) iml);
+//                    startActivity(intent);
+
                 }
-                catch(MalformedURLException e){
-                }
-                catch(IOException e){
+                catch(Exception e){
+                    Toast.makeText(MenuScreen.this, "Submission Error", Toast.LENGTH_SHORT).show();
                 }
             }
         });

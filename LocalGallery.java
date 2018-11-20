@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.io.Serializable;
 import java.lang.reflect.Array;
@@ -24,7 +25,7 @@ public class LocalGallery extends AppCompatActivity implements Serializable{
     Button saveBtn;
     List<File> iml;
     ImageView imageView;
-    File file;
+    File file = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -37,6 +38,10 @@ public class LocalGallery extends AppCompatActivity implements Serializable{
         homeBtn = (Button) findViewById(R.id.galToHomeBtn);
         viewGalleryBtn = (Button) findViewById(R.id.button);
         saveBtn = (Button) findViewById(R.id.saveLocalGalleryImageBtn);
+
+        if(file == null){
+            saveBtn.setEnabled(false);
+        }
 
         homeBtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -60,6 +65,7 @@ public class LocalGallery extends AppCompatActivity implements Serializable{
             public void onClick(View view){
                 //ADD TO IMAGE LIST
                 iml.add(file);
+                Toast.makeText(LocalGallery.this, "Image added to image list", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -82,6 +88,8 @@ public class LocalGallery extends AppCompatActivity implements Serializable{
             imageView = (ImageView) findViewById(R.id.imageViewGallery);
             imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
             file = new File(picturePath);
+
+            saveBtn.setEnabled(true);
         }
     }
 }
