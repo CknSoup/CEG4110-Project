@@ -3,51 +3,74 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
 
     <Button
         android:id="@+id/listToHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="91dp"
+        android:layout_marginBottom="34dp"
         android:text="Menu Screen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        app:layout_constraintTop_toBottomOf="@+id/listPrevious" />
 
-    <ScrollView
-        android:id="@+id/scrollView2"
+    <ImageView
+        android:id="@+id/imageListImageView"
         android:layout_width="0dp"
+        android:layout_height="249dp"
+        android:layout_marginBottom="81dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/listNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_star" />
+
+    <Button
+        android:id="@+id/removeFromListBtn"
+        android:layout_width="178dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/listToHome"
+        android:layout_marginBottom="26dp"
+        android:text="Remove Image"
+        app:layout_constraintBottom_toTopOf="@+id/listPrevious"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/imageListImageView" />
 
-        <TableLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-            android:stretchColumns="1" >
-            <TableRow>
-                <ImageView
-                    android:id="@+id/listiv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dip"
-                    android:layout_marginTop="10dip"
-                    android:layout_marginRight="5dip"
-                    android:tint="#55ff0000"
-                    android:src="@drawable/ic_launcher_background"
-                    />
-            </TableRow>
-                <ImageView />
-        </TableLayout>
-    </ScrollView>
+    <Button
+        android:id="@+id/listNext"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="96dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Next Image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/listPrevious"
+        app:layout_constraintTop_toBottomOf="@+id/imageListImageView" />
+
+    <Button
+        android:id="@+id/listPrevious"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginStart="16dp"
+        android:text="Previous Image"
+        app:layout_constraintBottom_toTopOf="@+id/listToHome"
+        app:layout_constraintEnd_toStartOf="@+id/listNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/removeFromListBtn" />
+
 </android.support.constraint.ConstraintLayout>

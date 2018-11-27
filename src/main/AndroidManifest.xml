@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"
-            android:label="SeeFood App">
+            android:label="SeeFood App"
+            android:theme="@style/sefo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +28,8 @@
 
         <activity android:name=".TakePicture"
             android:label="SeeFood App - Take Picture"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/sefo" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -41,27 +43,33 @@
 
         <activity android:name=".LocalGallery"
             android:label="SeeFood App - Local Images"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/sefo" />
 
         <activity android:name=".ViewHistory"
             android:label="SeeFood App - Past Submissions"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/sefo" />
 
         <activity android:name=".ImageList"
             android:label="SeeFood App - Selected Images"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/sefo" />
 
         <activity android:name=".InformationPage"
             android:label="SeeFood App - Information Page"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/sefo" />
 
         <activity android:name=".MenuScreen"
             android:label="SeeFood App - Menu Screen"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/sefo" />
 
         <activity android:name=".Results"
             android:label="SeeFood App - Results"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/sefo" />
     </application>
 
 </manifest>
