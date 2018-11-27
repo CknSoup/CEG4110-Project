@@ -1,14 +1,11 @@
 package com.example.ceg4110.ceg4110group13project;
 
 import android.content.Intent;
-import android.graphics.BitmapFactory;
-import android.os.Environment;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.util.Log;
 
@@ -20,9 +17,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.impl.client.BasicResponseHandler;
 
-import java.io.IOException;
 import java.io.Serializable;
-import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.File;
@@ -57,6 +52,7 @@ public class MenuScreen extends AppCompatActivity implements Serializable{
 
         if(iml.size() == 0){
             submitBtn.setEnabled(false);
+            imageListBtn.setEnabled(false);
         }
 
         String s = "Images in Image List: " + iml.size();
@@ -92,8 +88,10 @@ public class MenuScreen extends AppCompatActivity implements Serializable{
         imageListBtn.setOnClickListener(new View.OnClickListener()  {
             @Override
             public void onClick(View view)  {
+                int index = 0;
                 Intent i = new Intent(MenuScreen.this, ImageList.class);
                 i.putExtra("list", (Serializable) iml);
+                i.putExtra("index", (Serializable) index);
                 startActivity(i);
             }
         });
@@ -110,10 +108,10 @@ public class MenuScreen extends AppCompatActivity implements Serializable{
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MenuScreen.this, "Button push1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MenuScreen.this, "Submitting", Toast.LENGTH_LONG).show();
+                List<String> cvlist = new ArrayList<String>();
                 try{
-                    //for(int iii = 0; iii < iml.size(); iii++){
-                    Toast.makeText(MenuScreen.this, "Button push2", Toast.LENGTH_SHORT).show();
+                    for(int iii = 0; iii < iml.size(); iii++){
                         String url = "http://18.224.124.230:1030/upload";
                         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                         StrictMode.setThreadPolicy(policy);
@@ -122,7 +120,7 @@ public class MenuScreen extends AppCompatActivity implements Serializable{
 
                         HttpPost httppost = new HttpPost(url);
 
-                        File file = iml.get(0);
+                        File file = iml.get(iii);
                         InputStreamEntity reqEntity = new InputStreamEntity(
                                 new FileInputStream(file), -1);
                         reqEntity.setContentType("multipart/form-data");
@@ -141,25 +139,17 @@ public class MenuScreen extends AppCompatActivity implements Serializable{
                         Log.i("Log response", f[0] + " " + f[1]);
                         String s1 = String.valueOf(f[0]);
                         String s2 = String.valueOf(f[1]);
-                        ImageView ivv = null;
-                        ivv.setImageBitmap(BitmapFactory.decodeFile(file.getAbsolutePath()));
-                        Toast.makeText(MenuScreen.this, s1, Toast.LENGTH_SHORT).show();
-                        Toast.makeText(MenuScreen.this, s2, Toast.LENGTH_SHORT).show();
-                    //}
-
-                    Toast.makeText(MenuScreen.this, "Works", Toast.LENGTH_SHORT).show();
-
-                    for(int ii = 0; ii < iml.size(); ii++){
-                        iml.remove(ii);
+                        String path = file.getPath();
+                        cvlist.add(s1);
+                        cvlist.add(s2);
                     }
-                    tv.setText("Images in Image List: " + iml.size());
 
-//                    Intent intent = new Intent (MenuScreen.this, Results.class);
-//                    intent.putExtra("f1", (Serializable) s1);
-//                    intent.putExtra("f2", (Serializable) s2);
-//                    intent.putExtra("ivv", (Serializable) ivv);
-//                    intent.putExtra("list",(Serializable) iml);
-//                    startActivity(intent);
+                    Intent intent = new Intent (MenuScreen.this, Results.class);
+                    int index = 0;
+                    intent.putExtra("index", (Serializable) index);
+                    intent.putExtra("cvlist", (Serializable) cvlist);
+                    intent.putExtra("list",(Serializable) iml);
+                    startActivity(intent);
 
                 }
                 catch(Exception e){

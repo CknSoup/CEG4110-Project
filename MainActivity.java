@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements Serializable{
         tv = (TextView) findViewById(R.id.label);
 
         submitBtn.setEnabled(false);
+        imageListBtn.setEnabled(false);
 
         takePictureBtn.setOnClickListener(new View.OnClickListener() {
             @Override
