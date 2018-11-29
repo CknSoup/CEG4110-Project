@@ -28,11 +28,12 @@ def getFileList(page):
 	result = cursor.fetchall() 
 	
 	# Make confidences.txt file and select pictures that are to be sent
+	confidenceFile = "/home/ubuntu/builds/testUpload/files_to_send/confidences.txt"
+	f = open(confidenceFile, "a")
 	for r in result:
 		print r[2]
-		with open("/home/ubuntu/builds/testUpload/files_to_send/confidences.txt", "a") as f:
-			f.write(r[2] + "," + r[0] + "," + r[1] + "\n")
-
+		f.write(r[2] + "," + r[0] + "," + r[1] + "\n")
+		
 		copyfile("/home/ubuntu/builds/testUpload/files/" + r[2], "/home/ubuntu/builds/testUpload/files_to_send/" + r[2])
 
 	# Remove previous zip file
