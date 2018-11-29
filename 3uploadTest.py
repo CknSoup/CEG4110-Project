@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 from flask_uploads import UploadSet, configure_uploads, IMAGES
 from time import gmtime, strftime
 
@@ -31,6 +31,13 @@ def upload():
 	result = ai('/home/ubuntu/builds/testUpload/files/' + image_name)
 	addEntry(str(result[0,0]), str(result[0,1]), image_name, strftime("%Y-%m-%d %H:%M:%S", current_time))
 	return str(result[0,0]) + ' ' + str(result[0,1])
+	
+
+@app.route('/getFiles/<int:page>', methods=['GET'])
+def getFiles(page):
+	getFileList(page)
+	return send_file("/home/ubuntu/builds/testUpload/zipFiles/tmp.zip")
+#	return "yoyoyo"
 	
 
 if __name__ == '__main__':
