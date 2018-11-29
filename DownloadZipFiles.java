@@ -1,4 +1,6 @@
 // Needed to have access to (external storage)(If needed); this is a request for a runtime permission
+// This needs to be on the top level of the activity (whether main or somewhere else) in order for
+//    the "this" keyword to work
 
 int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 100;
 if (Build.VERSION.SDK_INT > 22) {
