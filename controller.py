@@ -1,3 +1,0 @@
-import uploadTest
-
-a = uploadTest()

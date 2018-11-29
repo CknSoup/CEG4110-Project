@@ -17,18 +17,28 @@ from PIL import Image
 
 # The script assumes the args are perfect, this will crash and burn otherwise.
 
-###### Initialization code - we only need to run this once and keep in memory.
-class seeFood:
-	def ai(image_path):
+class Find_Food:
+	
+	sess = ""
+	class_scores = ""
+	x_input = ""
+	keep_prob = ""
+
+	def __init__(self):
+	###### Initialization code - we only need to run this once and keep in memory.
+		global sess
 		sess = tf.Session()
-		saver = tf.train.import_meta_graph('saved_model/model_epoch5.ckpt.meta')
-		saver.restore(sess, tf.train.latest_checkpoint('saved_model/'))
+		saver = tf.train.import_meta_graph('/home/ubuntu/builds/testUpload/saved_model/model_epoch5.ckpt.meta')
+		saver.restore(sess, tf.train.latest_checkpoint('/home/ubuntu/builds/testUpload/saved_model/'))
 		graph = tf.get_default_graph()
+		global x_input
 		x_input = graph.get_tensor_by_name('Input_xn/Placeholder:0')
+		global keep_prob
 		keep_prob = graph.get_tensor_by_name('Placeholder:0')
+		global class_scores
 		class_scores = graph.get_tensor_by_name("fc8/fc8:0")
 		######
-		
+	def ai(self, image_path):	
 		# Work in RGBA space (A=alpha) since png's come in as RGBA, jpeg come in as RGB
 		# so convert everything to RGBA and then to RGB.
 		#image_path = args.image_path
@@ -39,8 +49,8 @@ class seeFood:
 		
 		#Run the image in the model.
 		scores = sess.run(class_scores, {x_input: img_tensor, keep_prob: 1.})
-		print scores
-		return scores.tostring()
+		print str(scores[0, 0]) + ' ' + str(scores[0, 1])
+		return scores
 		# if np.argmax = 0; then the first class_score was higher, e.g., the model sees food.
 		# if np.argmax = 1; then the second class_score was higher, e.g., the model does not see food.
 		#if np.argmax(scores) == 1:

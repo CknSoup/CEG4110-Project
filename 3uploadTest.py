@@ -7,11 +7,10 @@ from database_controller import *
 
 
 app = Flask(__name__)
-
 photos = UploadSet('photos', IMAGES)
-
 app.config['UPLOADED_PHOTOS_DEST'] = 'files'
 configure_uploads(app, photos)
+#food = Find_Food()
 
 @app.route('/', methods=['GET'])
 def index():
