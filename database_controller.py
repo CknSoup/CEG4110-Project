@@ -4,6 +4,15 @@ from shutil import copyfile
 from shutil import make_archive
 import os
 
+def getLastEntry():
+	connection = sqlite3.connect("/home/ubuntu/builds/testUpload/sqlDatabase.db")
+	cursor = connection.cursor()
+	cursor.execute("SELECT max(uniqueId) FROM picture")
+	max = cursor.fetchone()[0]
+	connection.commit()
+	connection.close()
+	return max - 1
+
 def addEntry(conf1, conf2, path, current_date):
 	connection = sqlite3.connect("/home/ubuntu/builds/testUpload/sqlDatabase.db")
 	cursor = connection.cursor()
@@ -31,7 +40,6 @@ def getFileList(page):
 	confidenceFile = "/home/ubuntu/builds/testUpload/files_to_send/confidences.txt"
 	f = open(confidenceFile, "a")
 	for r in result:
-		print r[2]
 		f.write(r[2] + "," + r[0] + "," + r[1] + "\n")
 		
 		copyfile("/home/ubuntu/builds/testUpload/files/" + r[2], "/home/ubuntu/builds/testUpload/files_to_send/" + r[2])
@@ -49,4 +57,35 @@ def getFileList(page):
 	
 	connection.commit()
 	connection.close()
-#	return result
+
+def getPicture(page):
+	max = getLastEntry()
+	if page > max:
+		return 1
+	connection = sqlite3.connect("/home/ubuntu/builds/testUpload/sqlDatabase.db")
+	cursor = connection.cursor()
+	cursor.execute("SELECT picturePath FROM picture")
+	result = cursor.fetchall()[page]
+	copyfile("/home/ubuntu/builds/testUpload/files/" + result[0], "/home/ubuntu/builds/testUpload/files_to_send/pictureFile")
+	connection.commit()
+	connection.close()
+	return 0
+
+def getConfidence(c):
+	max = getLastEntry()
+	if c > max:
+		return "error"
+	connection = sqlite3.connect("/home/ubuntu/builds/testUpload/sqlDatabase.db")
+	cursor = connection.cursor()
+	
+	cursor.execute("SELECT confidence1 FROM picture")
+	result = cursor.fetchall()[c]
+	sconf = ""
+	#for r in result:
+	sconf = str(result[0])
+	cursor.execute("SELECT confidence2 FROM picture")
+	result = cursor.fetchall()[c]
+	sconf = sconf + " " + str(result[0])
+	connection.commit()
+	connection.close()
+	return sconf

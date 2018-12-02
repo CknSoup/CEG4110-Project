@@ -38,7 +38,7 @@ def ai(image_path):
 	
 	#Run the image in the model.
 	scores = sess.run(class_scores, {x_input: img_tensor, keep_prob: 1.})
-	print str(scores[0, 0]) + ' ' + str(scores[0, 1])
+	#print str(scores[0, 0]) + ' ' + str(scores[0, 1])
 	return scores
 	# if np.argmax = 0; then the first class_score was higher, e.g., the model sees food.
 	# if np.argmax = 1; then the second class_score was higher, e.g., the model does not see food.

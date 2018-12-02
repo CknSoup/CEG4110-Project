@@ -343,3 +343,983 @@ IOError: [Errno 104] Connection reset by peer
   from ._conv import register_converters as _register_converters
  * Debugger is active!
  * Debugger PIN: 331-445-009
+2018-11-29-22-05-21
+2018-11-29-22-07-28
+2018-11-29-22-07-34
+2018-11-29-22-14-11
+2018-11-29-22-14-16
+2018-11-29-22-14-20
+2018-11-29-22-14-24
+2018-11-29-22-14-30
+2018-11-29-22-14-36
+2018-11-29-22-14-41
+107.92.122.4 - - [02/Dec/2018 03:38:37] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+2018-11-29-22-05-21
+2018-11-29-22-07-28
+2018-11-29-22-07-34
+2018-11-29-22-14-11
+2018-11-29-22-14-16
+2018-11-29-22-14-20
+2018-11-29-22-14-24
+2018-11-29-22-14-30
+2018-11-29-22-14-36
+2018-11-29-22-14-41
+107.92.122.4 - - [02/Dec/2018 03:38:38] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 32] Broken pipe
+2018-11-29-22-05-21
+2018-11-29-22-07-28
+2018-11-29-22-07-34
+2018-11-29-22-14-11
+2018-11-29-22-14-16
+2018-11-29-22-14-20
+2018-11-29-22-14-24
+2018-11-29-22-14-30
+2018-11-29-22-14-36
+2018-11-29-22-14-41
+107.92.122.4 - - [02/Dec/2018 03:38:54] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+2018-11-29-22-05-21
+2018-11-29-22-07-28
+2018-11-29-22-07-34
+2018-11-29-22-14-11
+2018-11-29-22-14-16
+2018-11-29-22-14-20
+2018-11-29-22-14-24
+2018-11-29-22-14-30
+2018-11-29-22-14-36
+2018-11-29-22-14-41
+107.92.122.4 - - [02/Dec/2018 03:38:55] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 32] Broken pipe
+Finished writing file
+2018-12-02 03:40:13.654114: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-12-02 03:40:13.655627: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+1.0776867 0.98735094
+107.92.122.4 - - [02/Dec/2018 03:40:17] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+1.4442177 0.62065965
+107.92.122.4 - - [02/Dec/2018 03:40:23] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+1.3479844 0.7155479
+107.92.122.4 - - [02/Dec/2018 03:40:27] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+0.2939738 1.7689564
+107.92.122.4 - - [02/Dec/2018 03:40:53] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+2.6719797 -0.60577655
+107.92.122.4 - - [02/Dec/2018 03:40:57] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+1.4431794 0.62095183
+107.92.122.4 - - [02/Dec/2018 03:41:03] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+1.4036975 0.65998876
+107.92.122.4 - - [02/Dec/2018 03:41:07] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+1.0776867 0.98735094
+107.92.122.4 - - [02/Dec/2018 03:41:12] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+1.4442177 0.62065965
+107.92.122.4 - - [02/Dec/2018 03:41:17] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+1.3479844 0.7155479
+107.92.122.4 - - [02/Dec/2018 03:41:21] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+0.2939738 1.7689564
+107.92.122.4 - - [02/Dec/2018 03:41:47] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+2.6719797 -0.60577655
+107.92.122.4 - - [02/Dec/2018 03:41:52] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+1.4431794 0.62095183
+107.92.122.4 - - [02/Dec/2018 03:42:01] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+1.4036975 0.65998876
+107.92.122.4 - - [02/Dec/2018 03:42:05] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+Finished writing file
+0.8407378 1.2138159
+107.92.122.7 - - [02/Dec/2018 06:09:46] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+0.71266705 1.3500347
+107.92.122.46 - - [02/Dec/2018 18:31:35] "[37mPOST /upload HTTP/1.1[0m" 200 -
+2018-11-29-22-05-21
+2018-11-29-22-07-28
+2018-11-29-22-07-34
+2018-11-29-22-14-11
+2018-11-29-22-14-16
+2018-11-29-22-14-20
+2018-11-29-22-14-24
+2018-11-29-22-14-30
+2018-11-29-22-14-36
+2018-11-29-22-14-41
+107.92.122.46 - - [02/Dec/2018 19:15:30] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+2018-11-29-22-05-21
+2018-11-29-22-07-28
+2018-11-29-22-07-34
+2018-11-29-22-14-11
+2018-11-29-22-14-16
+2018-11-29-22-14-20
+2018-11-29-22-14-24
+2018-11-29-22-14-30
+2018-11-29-22-14-36
+2018-11-29-22-14-41
+107.92.122.46 - - [02/Dec/2018 19:15:30] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+2018-11-29-22-05-21
+2018-11-29-22-07-28
+2018-11-29-22-07-34
+2018-11-29-22-14-11
+2018-11-29-22-14-16
+2018-11-29-22-14-20
+2018-11-29-22-14-24
+2018-11-29-22-14-30
+2018-11-29-22-14-36
+2018-11-29-22-14-41
+107.92.122.46 - - [02/Dec/2018 19:17:48] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+2018-11-29-22-05-21
+2018-11-29-22-07-28
+2018-11-29-22-07-34
+2018-11-29-22-14-11
+2018-11-29-22-14-16
+2018-11-29-22-14-20
+2018-11-29-22-14-24
+2018-11-29-22-14-30
+2018-11-29-22-14-36
+2018-11-29-22-14-41
+107.92.122.46 - - [02/Dec/2018 19:17:49] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 32] Broken pipe
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+2018-11-29-22-05-21
+2018-11-29-22-07-28
+2018-11-29-22-07-34
+2018-11-29-22-14-11
+2018-11-29-22-14-16
+2018-11-29-22-14-20
+2018-11-29-22-14-24
+2018-11-29-22-14-30
+2018-11-29-22-14-36
+2018-11-29-22-14-41
+107.92.122.46 - - [02/Dec/2018 19:18:33] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+2018-11-29-22-05-21
+2018-11-29-22-07-28
+2018-11-29-22-07-34
+2018-11-29-22-14-11
+2018-11-29-22-14-16
+2018-11-29-22-14-20
+2018-11-29-22-14-24
+2018-11-29-22-14-30
+2018-11-29-22-14-36
+2018-11-29-22-14-41
+107.92.122.46 - - [02/Dec/2018 19:18:33] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 32] Broken pipe
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+2018-11-29-22-05-21
+2018-11-29-22-07-28
+2018-11-29-22-07-34
+2018-11-29-22-14-11
+2018-11-29-22-14-16
+2018-11-29-22-14-20
+2018-11-29-22-14-24
+2018-11-29-22-14-30
+2018-11-29-22-14-36
+2018-11-29-22-14-41
+107.92.122.46 - - [02/Dec/2018 19:18:52] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+2018-11-29-22-05-21
+2018-11-29-22-07-28
+2018-11-29-22-07-34
+2018-11-29-22-14-11
+2018-11-29-22-14-16
+2018-11-29-22-14-20
+2018-11-29-22-14-24
+2018-11-29-22-14-30
+2018-11-29-22-14-36
+2018-11-29-22-14-41
+107.92.122.46 - - [02/Dec/2018 19:18:53] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 32] Broken pipe
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+2018-11-29-22-05-21
+2018-11-29-22-07-28
+2018-11-29-22-07-34
+2018-11-29-22-14-11
+2018-11-29-22-14-16
+2018-11-29-22-14-20
+2018-11-29-22-14-24
+2018-11-29-22-14-30
+2018-11-29-22-14-36
+2018-11-29-22-14-41
+107.92.122.46 - - [02/Dec/2018 19:19:17] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+2018-11-29-22-05-21
+2018-11-29-22-07-28
+2018-11-29-22-07-34
+2018-11-29-22-14-11
+2018-11-29-22-14-16
+2018-11-29-22-14-20
+2018-11-29-22-14-24
+2018-11-29-22-14-30
+2018-11-29-22-14-36
+2018-11-29-22-14-41
+107.92.122.46 - - [02/Dec/2018 19:19:18] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+ * Detected change in '/home/ubuntu/builds/CEG4110-Project/find_food.py', reloading
+ * Restarting with stat
+/opt/anaconda2/lib/python2.7/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+ * Debugger is active!
+ * Debugger PIN: 331-445-009
+ * Detected change in '/home/ubuntu/builds/CEG4110-Project/database_controller.py', reloading
+Exception in thread Thread-1 (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+  File "/opt/anaconda2/lib/python2.7/threading.py", line 754, in run
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 777, in inner
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 612, in serve_forever
+  File "/opt/anaconda2/lib/python2.7/SocketServer.py", line 236, in serve_forever
+  File "/opt/anaconda2/lib/python2.7/threading.py", line 585, in set
+  File "/opt/anaconda2/lib/python2.7/threading.py", line 407, in notifyAll
+<type 'exceptions.TypeError'>: 'NoneType' object is not callable
+ * Restarting with stat
+/opt/anaconda2/lib/python2.7/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+ * Debugger is active!
+ * Debugger PIN: 331-445-009
+107.92.122.46 - - [02/Dec/2018 19:21:40] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:21:40] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+ * Detected change in '/home/ubuntu/builds/CEG4110-Project/3uploadTest.py', reloading
+ * Restarting with stat
+/opt/anaconda2/lib/python2.7/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+ * Debugger is active!
+ * Debugger PIN: 331-445-009
+107.92.122.46 - - [02/Dec/2018 19:23:02] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:23:02] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:23:13] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:23:13] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:23:50] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:23:51] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:24:15] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:24:15] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:24:34] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:24:34] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 32] Broken pipe
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:25:18] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:25:18] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 32] Broken pipe
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:26:02] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:26:02] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:26:57] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:26:57] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:27:27] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:27:27] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:28:19] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:28:19] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:28:47] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:29:17] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:29:17] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:30:34] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:30:34] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:31:47] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:31:47] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:32:05] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:33:38] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:33:38] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:34:17] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:34:52] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:34:53] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:37:02] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:37:02] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:37:30] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:37:30] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:37:47] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:38:16] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:38:17] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:38:35] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:38:53] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:38:53] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:39:27] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:39:28] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:39:59] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:39:59] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:46:28] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:46:28] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:46:56] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:47:09] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:47:10] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:47:40] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:47:40] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:49:24] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:49:25] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 19:50:29] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 19:50:30] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:54:15] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:55:04] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:56:07] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:56:36] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:56:42] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:57:23] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:58:05] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:58:36] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 19:58:55] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 20:03:46] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:03:47] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 20:05:54] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 20:09:04] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:09:05] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 20:09:35] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 20:10:32] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 20:11:16] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+130.108.104.22 - - [02/Dec/2018 20:12:02] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:12:06] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:12:06] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 20:13:09] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:13:10] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 20:14:26] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:14:26] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 20:15:35] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:15:35] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 20:17:02] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:17:02] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 20:17:29] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:17:30] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 20:20:12] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:20:12] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 20:23:48] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:23:48] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 20:25:13] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:25:14] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:25:51] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:25:51] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 20:27:17] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+130.108.104.22 - - [02/Dec/2018 20:32:14] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:33:20] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:33:20] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:33:38] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:33:39] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 20:34:27] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 20:34:28] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:34:28] "[1m[35mGET /getFiles/1 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/opt/anaconda2/lib/python2.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/opt/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/opt/anaconda2/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/opt/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda2/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "3uploadTest.py", line 36, in getFiles
+    
+  File "/home/ubuntu/builds/CEG4110-Project/database_controller.py", line 47, in getFileList
+    os.remove("/home/ubuntu/builds/testUpload/files_to_send/confidences.txt")
+OSError: [Errno 2] No such file or directory: '/home/ubuntu/builds/testUpload/files_to_send/confidences.txt'
+107.92.122.46 - - [02/Dec/2018 20:34:32] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:34:33] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 20:36:16] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 20:37:17] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 20:38:27] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:38:27] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 20:39:09] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 20:40:20] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 20:41:47] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:41:47] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 20:45:18] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+130.108.104.22 - - [02/Dec/2018 20:47:48] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:47:50] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:47:50] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+130.108.104.22 - - [02/Dec/2018 20:48:58] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+130.108.104.22 - - [02/Dec/2018 20:50:16] "[37mGET /getFiles/2 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:50:21] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:50:21] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 20:53:11] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 20:53:11] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 261, in execute
+    write(data)
+  File "/opt/anaconda2/lib/python2.7/site-packages/werkzeug/serving.py", line 242, in write
+    self.wfile.write(data)
+IOError: [Errno 104] Connection reset by peer
+107.92.122.46 - - [02/Dec/2018 21:06:21] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+107.92.122.46 - - [02/Dec/2018 21:06:21] "[37mGET /getFiles/1 HTTP/1.1[0m" 200 -
+Finished writing file
+2018-12-02 21:06:40.303262: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-12-02 21:06:40.304425: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+107.92.122.46 - - [02/Dec/2018 21:06:46] "[37mPOST /upload HTTP/1.1[0m" 200 -
+Finished writing file
+107.92.122.46 - - [02/Dec/2018 21:10:38] "[37mPOST /upload HTTP/1.1[0m" 200 -
+ * Detected change in '/home/ubuntu/builds/CEG4110-Project/database_controller.py', reloading
+ * Restarting with stat
+  File "3uploadTest.py", line 50
+    getConfidence(conf, 2)
+    ^
+IndentationError: unexpected indent

@@ -10,7 +10,6 @@ app = Flask(__name__)
 photos = UploadSet('photos', IMAGES)
 app.config['UPLOADED_PHOTOS_DEST'] = 'files'
 configure_uploads(app, photos)
-#food = Find_Food()
 
 @app.route('/', methods=['GET'])
 def index():
@@ -36,8 +35,22 @@ def upload():
 def getFiles(page):
 	getFileList(page)
 	return send_file("/home/ubuntu/builds/testUpload/zipFiles/tmp.zip")
-#	return "yoyoyo"
 	
+@app.route('/picture/<int:page>', methods=['GET'])
+def picture(page):
+	error_code = getPicture(page)
+	if error_code == 1:
+		return send_file("/home/ubuntu/builds/testUpload/black.jpg")
+	return send_file("/home/ubuntu/builds/testUpload/files_to_send/pictureFile")
+
+@app.route('/confidence/<int:conf>', methods=['GET'])
+def confidences(conf):
+	sconf = getConfidence(conf)
+	return sconf
+
+@app.route('/latest', methods=['GET'])
+def latest():
+	return str(getLastEntry())
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port='1030', debug=True)
