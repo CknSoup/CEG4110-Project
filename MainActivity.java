@@ -63,17 +63,10 @@ public class MainActivity extends AppCompatActivity implements Serializable{
         viewHistoryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int page = -1;
                 Intent i = new Intent(MainActivity.this, ViewHistory.class);
                 i.putExtra("list", (Serializable) iml);
-                startActivity(i);
-            }
-        });
-
-        imageListBtn.setOnClickListener(new View.OnClickListener()  {
-            @Override
-            public void onClick(View view)  {
-                Intent i = new Intent(MainActivity.this, ImageList.class);
-                i.putExtra("list", (Serializable) iml);
+                i.putExtra("page", (Serializable) page);
                 startActivity(i);
             }
         });

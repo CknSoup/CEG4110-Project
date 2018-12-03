@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.widget.TextView;
 import android.widget.Button;
 import android.graphics.Bitmap;
+import android.widget.ProgressBar;
 
 import java.io.Serializable;
 import java.io.File;
@@ -29,6 +30,7 @@ public class Results extends AppCompatActivity implements Serializable {
     List<File> iml;
     int index;
     List<String> cvlist;
+    ProgressBar pb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -50,6 +52,7 @@ public class Results extends AppCompatActivity implements Serializable {
         homeBtn = (Button) findViewById(R.id.resultToMenuBtn);
         nextBtn = (Button) findViewById(R.id.nextBtn);
         previousBtn = (Button) findViewById(R.id.previousBtn);
+        pb = (ProgressBar) findViewById(R.id.progressBar);
 
         float f1 = Float.parseFloat(s1);
         float f2 = Float.parseFloat(s2);
@@ -60,6 +63,13 @@ public class Results extends AppCompatActivity implements Serializable {
         }
         else{
             tv.setText("Oh yes... I see food! :D");
+        }
+
+        if(answer > 1){
+            pb.setProgress(pb.getMax());
+        }
+        else if(answer < -1){
+            pb.setProgress(pb.getProgress());
         }
 
         f1Tv.setText(s1);

@@ -79,8 +79,10 @@ public class MenuScreen extends AppCompatActivity implements Serializable{
         viewHistoryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int page = -1;
                 Intent i = new Intent(MenuScreen.this, ViewHistory.class);
                 i.putExtra("list", (Serializable) iml);
+                i.putExtra("page", (Serializable) page);
                 startActivity(i);
             }
         });
@@ -108,7 +110,6 @@ public class MenuScreen extends AppCompatActivity implements Serializable{
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MenuScreen.this, "Submitting", Toast.LENGTH_LONG).show();
                 List<String> cvlist = new ArrayList<String>();
                 try{
                     for(int iii = 0; iii < iml.size(); iii++){
@@ -125,8 +126,6 @@ public class MenuScreen extends AppCompatActivity implements Serializable{
                                 new FileInputStream(file), -1);
                         reqEntity.setContentType("multipart/form-data");
                         reqEntity.setChunked(true); // Send in multiple parts if needed
-
-                        Toast.makeText(MenuScreen.this, "Connection attempt", Toast.LENGTH_SHORT).show();
 
                         httppost.setEntity(reqEntity);
                         HttpResponse response = httpclient.execute(httppost);

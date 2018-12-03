@@ -37,7 +37,7 @@
     <Button
         android:id="@+id/removeFromListBtn"
         android:layout_width="178dp"
-        android:layout_height="0dp"
+        android:layout_height="47dp"
         android:layout_marginBottom="26dp"
         android:text="Remove Image"
         app:layout_constraintBottom_toTopOf="@+id/listPrevious"
@@ -61,7 +61,7 @@
     <Button
         android:id="@+id/listPrevious"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="14dp"
         android:layout_marginEnd="48dp"
         android:layout_marginLeft="16dp"

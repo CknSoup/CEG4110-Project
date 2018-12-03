@@ -50,7 +50,11 @@ public class InformationPage extends AppCompatActivity {
                 "image will display in the imageview.\nFrom here you can click the add for submission button " +
                 "to add that picture to the image list. The add for submission button will only be clickable " +
                 "if you have a picture selected from your picture gallery.\nBy clicking the Menu Screen button " +
-                ", you return to the menu screen.\n\nView Past History - View's Past History.\n\nMade by " +
+                ", you return to the menu screen.\n\nView Past History - View's Past History.\n\nSubmission - " +
+                "When the submit images button is pressed, every image in the image list will be sent to our server " +
+                "for analysis. An AI will determine if there is any food in the pictures. Results will be sent back " +
+                "and the user will be able to view it. The image being analyzed will appear, along with it's results. " +
+                "If the user submits multiple photos then they will be able to cycle through all of them. \n\nMade by " +
                 "Jesse Liu and Andrew Sjoberg.");
 
         tv.setMovementMethod(new ScrollingMovementMethod());

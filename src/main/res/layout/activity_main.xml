@@ -5,13 +5,14 @@
     android:id="@+id/mainActivityXML"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <Button
         android:id="@+id/submitPicturesBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="19dp"
+        android:layout_marginBottom="26dp"
         android:layout_marginEnd="47dp"
         android:layout_marginRight="47dp"
         android:text="Submit Images"
@@ -24,17 +25,15 @@
         android:id="@+id/viewHistoryBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="26dp"
         android:layout_marginEnd="64dp"
         android:layout_marginLeft="49dp"
         android:layout_marginRight="64dp"
         android:layout_marginStart="49dp"
-        android:layout_marginTop="33dp"
         android:text="View Past History"
-        app:layout_constraintBottom_toTopOf="@+id/infoBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/submitPicturesBtn"
         app:layout_constraintEnd_toStartOf="@+id/submitPicturesBtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/takePictureBtn" />
+        app:layout_constraintTop_toTopOf="@+id/submitPicturesBtn" />
 
     <Button
         android:id="@+id/takePictureBtn"
@@ -54,7 +53,7 @@
         android:id="@+id/imageBrowserBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="33dp"
         android:layout_marginEnd="47dp"
         android:layout_marginRight="47dp"
         android:text="View Local Picture Gallery"
@@ -82,7 +81,7 @@
     <TextView
         android:id="@+id/label"
         android:layout_width="0dp"
-        android:layout_height="57dp"
+        android:layout_height="62dp"
         android:layout_marginBottom="30dp"
         android:layout_marginEnd="67dp"
         android:layout_marginLeft="67dp"
@@ -98,7 +97,7 @@
         android:id="@+id/infoBtn"
         android:layout_width="129dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="15dp"
         android:text="Information For This App"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

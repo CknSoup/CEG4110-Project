@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/historyToHomeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="Menu Screen" />
+
+    <ImageView
+        android:id="@+id/pastImage"
+        android:layout_width="256dp"
+        android:layout_height="254dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:id="@+id/pastCI1"
+        android:layout_width="96dp"
+        android:layout_height="33dp"
+        android:layout_alignEnd="@+id/historytv"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="202dp" />
+
+    <TextView
+        android:id="@+id/pastCI2"
+        android:layout_width="96dp"
+        android:layout_height="33dp"
+        android:layout_alignStart="@+id/historytv"
+        android:layout_alignTop="@+id/pastCI1" />
+
+    <TextView
+        android:id="@+id/historytv"
+        android:layout_width="208dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/historytv2"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/bBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/nBtn"
+        android:layout_toStartOf="@+id/historyToHomeBtn"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/nBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/firstBtn"
+        android:layout_toEndOf="@+id/historyToHomeBtn"
+        android:text="Next" />
+
+    <TextView
+        android:id="@+id/historytv2"
+        android:layout_width="218dp"
+        android:layout_height="33dp"
+        android:layout_above="@+id/pastCI1"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/firstBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="139dp"
+        android:text="First" />
+
+    <Button
+        android:id="@+id/latestBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="81dp"
+        android:text="Latest" />
+
+    <Button
+        android:id="@+id/b2Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/latestBtn"
+        android:layout_toStartOf="@+id/historyToHomeBtn"
+        android:text="Back 10" />
+
+    <Button
+        android:id="@+id/n2Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/latestBtn"
+        android:layout_toEndOf="@+id/historyToHomeBtn"
+        android:text="Next 10" />
+</RelativeLayout>
