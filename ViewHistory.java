@@ -51,6 +51,8 @@ public class ViewHistory extends AppCompatActivity implements Serializable{
     TextView tv4;
     int page;
     int most;
+    Button green;
+    Button red;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -68,9 +70,11 @@ public class ViewHistory extends AppCompatActivity implements Serializable{
         backBtn = (Button) findViewById(R.id.bBtn);
         back10Btn = (Button) findViewById(R.id.b2Btn);
         imageView = (ImageView) findViewById(R.id.pastImage);
+        green = (Button) findViewById(R.id.gre);
+        red = (Button) findViewById(R.id.re);
 
-        tv1 = (TextView) findViewById(R.id.pastCI1);
-        tv2 = (TextView) findViewById(R.id.pastCI2);
+        tv1 = (TextView) findViewById(R.id.pastCI2);
+        tv2 = (TextView) findViewById(R.id.pastCI1);
         tv3 = (TextView) findViewById(R.id.historytv);
         tv4 = (TextView) findViewById(R.id.historytv2);
 
@@ -159,6 +163,34 @@ public class ViewHistory extends AppCompatActivity implements Serializable{
                 else{
                     tv4.setText("Oh yes... I see food! :D");
                 }
+                if(ci1 > 0 && ci2 < 0){
+                    green.getLayoutParams().width=400;
+                    red.getLayoutParams().width=0;
+                }
+                else if(ci1 < 0 && ci2 > 0){
+                    green.getLayoutParams().width=0;
+                    red.getLayoutParams().width=400;
+                }
+                else if(ci1 > 0 && ci2 > 0){
+                    float total2 = ci1 + ci2;
+                    float greenWidth = ci1 / total2 * 400;
+                    float redWidth = ci2 / total2 * 400;
+                    int g = Math.round(greenWidth);
+                    int r = Math.round(redWidth);
+                    green.getLayoutParams().width=g;
+                    red.getLayoutParams().width=r;
+                }
+                else{
+                    float f3 = ci1 * -1;
+                    float f4 = ci2 * -1;
+                    float total2 = f3 + f4;
+                    float greenWidth = f4 / total2 * 400;
+                    float redWidth = f3 / total2 * 400;
+                    int g = Math.round(greenWidth);
+                    int r = Math.round(redWidth);
+                    green.getLayoutParams().width=g;
+                    red.getLayoutParams().width=r;
+                }
             }
             catch(Exception e){
 
@@ -169,6 +201,8 @@ public class ViewHistory extends AppCompatActivity implements Serializable{
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
 
         homeBtn.setOnClickListener(new View.OnClickListener(){
             @Override

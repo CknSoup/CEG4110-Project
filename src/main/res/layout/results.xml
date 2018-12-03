@@ -1,105 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:layout_editor_absoluteY="25dp">
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/resultsIV"
-        android:layout_width="0dp"
-        android:layout_height="244dp"
-        android:layout_marginBottom="152dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="23dp"
-        app:layout_constraintBottom_toTopOf="@+id/nextBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:color/background_light" />
+        android:layout_width="236dp"
+        android:layout_height="260dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp" />
 
     <TextView
         android:id="@+id/resultTV"
-        android:layout_width="193dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/s1TV"
-        app:layout_constraintEnd_toEndOf="@+id/s1TV"
-        app:layout_constraintStart_toEndOf="@+id/s1TV"
-        app:layout_constraintTop_toBottomOf="@+id/resultsIV" />
+        android:layout_width="214dp"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="232dp" />
 
     <TextView
         android:id="@+id/s1TV"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="54dp"
-        android:layout_marginStart="54dp"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar"
-        app:layout_constraintEnd_toStartOf="@+id/s2TV"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultTV" />
+        android:layout_width="112dp"
+        android:layout_height="36dp"
+        android:layout_alignStart="@+id/resultsIV"
+        android:layout_below="@+id/resultTV"
+        android:layout_marginTop="-232dp" />
 
     <TextView
         android:id="@+id/s2TV"
-        android:layout_width="0dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/s1TV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/s1TV" />
+        android:layout_width="112dp"
+        android:layout_height="36dp"
+        android:layout_alignEnd="@+id/resultsIV"
+        android:layout_below="@+id/resultTV"
+        android:layout_marginTop="-232dp" />
 
     <Button
         android:id="@+id/resultToMenuBtn"
         android:layout_width="129dp"
         android:layout_height="52dp"
-        android:layout_marginBottom="22dp"
-        android:text="Menu Screen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/previousBtn"
-        app:layout_constraintStart_toEndOf="@+id/previousBtn"
-        app:layout_constraintTop_toBottomOf="@+id/nextBtn" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="37dp"
+        android:text="Menu Screen" />
 
     <Button
         android:id="@+id/nextBtn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="103dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="Next Result"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/previousBtn"
-        app:layout_constraintTop_toBottomOf="@+id/resultsIV" />
+        android:layout_width="124dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/resultToMenuBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="46dp"
+        android:text="Next Result" />
 
     <Button
         android:id="@+id/previousBtn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginStart="16dp"
-        android:text="Previous Result"
-        app:layout_constraintBottom_toBottomOf="@+id/nextBtn"
-        app:layout_constraintEnd_toStartOf="@+id/nextBtn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nextBtn" />
+        android:layout_width="124dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/resultToMenuBtn"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="46dp"
+        android:text="Previous Result" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="313dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/nextBtn"
-        app:layout_constraintEnd_toEndOf="@+id/previousBtn"
-        app:layout_constraintStart_toEndOf="@+id/previousBtn"
-        app:layout_constraintTop_toBottomOf="@+id/s1TV" />
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/green"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/resultTV"
+        android:layout_marginBottom="161dp"
+        android:background="@android:color/holo_green_light" />
+
+    <Button
+        android:id="@+id/red"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/green"
+        android:layout_toEndOf="@+id/s1TV"
+        android:background="@android:color/holo_red_dark" />
+
+</RelativeLayout>

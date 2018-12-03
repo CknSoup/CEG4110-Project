@@ -50,7 +50,14 @@ public class InformationPage extends AppCompatActivity {
                 "image will display in the imageview.\nFrom here you can click the add for submission button " +
                 "to add that picture to the image list. The add for submission button will only be clickable " +
                 "if you have a picture selected from your picture gallery.\nBy clicking the Menu Screen button " +
-                ", you return to the menu screen.\n\nView Past History - View's Past History.\n\nSubmission - " +
+                ", you return to the menu screen.\n\nView Past History - View's Past History. Right away " +
+                "it will show the latest submission. It will show the image and it's results. There are seven buttons. " +
+                "The menu screen button takes the user back to the menu screen, the first button will show the very first " +
+                "submission in the database. The latest button will show the most recent submission. Next will show the next " +
+                "submission after the current one and next 10 will jump forward ten submissions. Past will show " +
+                "the previous submission and past 10 will jump backwards ten submissions. If you are already viewing the latest " +
+                ", then the latest button, next button, and the next 10 button will be disabled. If you are viewing the " +
+                "first, then the first button, past button, and the past 10 button will be disabled.\n\nSubmission - " +
                 "When the submit images button is pressed, every image in the image list will be sent to our server " +
                 "for analysis. An AI will determine if there is any food in the pictures. Results will be sent back " +
                 "and the user will be able to view it. The image being analyzed will appear, along with it's results. " +

@@ -25,24 +25,26 @@
     <TextView
         android:id="@+id/pastCI1"
         android:layout_width="96dp"
-        android:layout_height="33dp"
-        android:layout_alignEnd="@+id/historytv"
+        android:layout_height="31dp"
+        android:layout_alignEnd="@+id/pastImage"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="202dp" />
+        android:layout_marginBottom="220dp" />
 
     <TextView
         android:id="@+id/pastCI2"
         android:layout_width="96dp"
-        android:layout_height="33dp"
-        android:layout_alignStart="@+id/historytv"
-        android:layout_alignTop="@+id/pastCI1" />
+        android:layout_height="31dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/pastCI1"
+        android:layout_marginStart="71dp" />
 
     <TextView
         android:id="@+id/historytv"
         android:layout_width="208dp"
-        android:layout_height="35dp"
+        android:layout_height="32dp"
         android:layout_above="@+id/historytv2"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp" />
 
     <Button
         android:id="@+id/bBtn"
@@ -63,9 +65,10 @@
     <TextView
         android:id="@+id/historytv2"
         android:layout_width="218dp"
-        android:layout_height="33dp"
+        android:layout_height="34dp"
         android:layout_above="@+id/pastCI1"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-2dp" />
 
     <Button
         android:id="@+id/firstBtn"
@@ -100,4 +103,20 @@
         android:layout_alignTop="@+id/latestBtn"
         android:layout_toEndOf="@+id/historyToHomeBtn"
         android:text="Next 10" />
+
+    <Button
+        android:id="@+id/gre"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_above="@+id/bBtn"
+        android:layout_alignStart="@+id/historytv"
+        android:background="@android:color/holo_green_light" />
+
+    <Button
+        android:id="@+id/re"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_above="@+id/bBtn"
+        android:layout_alignEnd="@+id/historytv"
+        android:background="@android:color/holo_red_dark" />
 </RelativeLayout>

@@ -30,7 +30,8 @@ public class Results extends AppCompatActivity implements Serializable {
     List<File> iml;
     int index;
     List<String> cvlist;
-    ProgressBar pb;
+    Button green;
+    Button red;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -52,7 +53,8 @@ public class Results extends AppCompatActivity implements Serializable {
         homeBtn = (Button) findViewById(R.id.resultToMenuBtn);
         nextBtn = (Button) findViewById(R.id.nextBtn);
         previousBtn = (Button) findViewById(R.id.previousBtn);
-        pb = (ProgressBar) findViewById(R.id.progressBar);
+        green = (Button) findViewById(R.id.green);
+        red = (Button) findViewById(R.id.red);
 
         float f1 = Float.parseFloat(s1);
         float f2 = Float.parseFloat(s2);
@@ -65,11 +67,33 @@ public class Results extends AppCompatActivity implements Serializable {
             tv.setText("Oh yes... I see food! :D");
         }
 
-        if(answer > 1){
-            pb.setProgress(pb.getMax());
+        if(f1 > 0 && f2 < 0){
+            green.getLayoutParams().width=400;
+            red.getLayoutParams().width=0;
         }
-        else if(answer < -1){
-            pb.setProgress(pb.getProgress());
+        else if(f1 < 0 && f2 > 0){
+            green.getLayoutParams().width=0;
+            red.getLayoutParams().width=400;
+        }
+        else if(f1 > 0 && f2 > 0){
+            float total = f1 + f2;
+            float greenWidth = f1 / total * 400;
+            float redWidth = f2 / total * 400;
+            int g = Math.round(greenWidth);
+            int r = Math.round(redWidth);
+            green.getLayoutParams().width=g;
+            red.getLayoutParams().width=r;
+        }
+        else{
+            float f3 = f1 * -1;
+            float f4 = f2 * -1;
+            float total = f3 + f4;
+            float greenWidth = f4 / total * 400;
+            float redWidth = f3 / total * 400;
+            int g = Math.round(greenWidth);
+            int r = Math.round(redWidth);
+            green.getLayoutParams().width=g;
+            red.getLayoutParams().width=r;
         }
 
         f1Tv.setText(s1);
